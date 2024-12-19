@@ -1,23 +1,43 @@
 import logo from './logo.svg';
 import './App.css';
+import Garage from './Garage';
+
+import Link from './Link'
+import CanvasJSReact from '@canvasjs/react-charts';
+
+
 
 function App() {
+  const options = {
+    title: {
+      text: "Basic Column Chart in React"
+    },
+    data: [{
+      type: "column",
+      dataPoints: [
+      { label: "Apple",  y: 10  },
+      { label: "Orange", y: 15  },
+      { label: "Banana", y: 25  },
+      { label: "Mango",  y: 30  },
+      { label: "Grape",  y: 28  }
+      ]
+    }]
+    }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>hello</h1>
+
+      <Link linkText="About"/>
+      <Link linkText="Store"/>
+      <Link linkText="About"/>
+      <Link linkText="About"/>
+
+      <Garage></Garage>
+
+      <CanvasJSChart options = {options}
+		  /* onRef = {ref => this.chart = ref} */
+		  />
     </div>
   );
 }
