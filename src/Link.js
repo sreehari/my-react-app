@@ -1,6 +1,6 @@
 function Link(props) {
   return <>
-      <a>{props.linkText}</a>
+      <a style={{color: "red"}}>{props.linkText}</a>
     </>
 }
 

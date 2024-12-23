@@ -2,10 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Garage from './Garage';
 
-import Link from './Link'
-import CanvasJSReact from '@canvasjs/react-charts';
-
-
+import Link from './Link';
 
 function App() {
   const options = {
@@ -34,10 +31,6 @@ function App() {
       <Link linkText="About"/>
 
       <Garage></Garage>
-
-      <CanvasJSChart options = {options}
-		  /* onRef = {ref => this.chart = ref} */
-		  />
     </div>
   );
 }
